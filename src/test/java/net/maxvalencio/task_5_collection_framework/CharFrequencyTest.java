@@ -19,15 +19,15 @@ public class CharFrequencyTest {
 	public void calculateCharFrequency_correct() {
 		String actual = uniqCharacters.calculateCharFrequency("hello world!");
 		String expected = "hello world!\n" +
-						  "\"h\" - 1\n" +
-						  "\"e\" - 1\n" +
-						  "\"l\" - 3\n" +
-						  "\"o\" - 2\n" +
-						  "\" \" - 1\n" +
-						  "\"w\" - 1\n" +
-						  "\"r\" - 1\n" +
-						  "\"d\" - 1\n" +
-						  "\"!\" - 1\n";
+				"\"h\" - 1\n" +
+				"\"e\" - 1\n" +
+				"\"l\" - 3\n" +
+				"\"o\" - 2\n" +
+				"\" \" - 1\n" +
+				"\"w\" - 1\n" +
+				"\"r\" - 1\n" +
+				"\"d\" - 1\n" +
+				"\"!\" - 1\n";
 		assertEquals(expected, actual);
 	}
 	
@@ -42,21 +42,21 @@ public class CharFrequencyTest {
 	public void calculateCharFrequency_LongLine_correct(){
 		String actual = uniqCharacters.calculateCharFrequency("To be, or not to be, that is the question");
 		String expected = "To be, or not to be, that is the question\n"+
-						  "\"T\" - 1\n" +
-						  "\"o\" - 5\n" +
-						  "\" \" - 9\n" +
-						  "\"b\" - 2\n" +
-						  "\"e\" - 4\n" +
-						  "\",\" - 2\n" +
-						  "\"r\" - 1\n" +
-						  "\"n\" - 2\n" +
-						  "\"t\" - 6\n" +
-						  "\"h\" - 2\n" +
-						  "\"a\" - 1\n" +
-						  "\"i\" - 2\n" +
-						  "\"s\" - 2\n" +
-						  "\"q\" - 1\n" +
-						  "\"u\" - 1\n";
+				"\"T\" - 1\n" +
+				"\"o\" - 5\n" +
+				"\" \" - 9\n" +
+				"\"b\" - 2\n" +
+				"\"e\" - 4\n" +
+				"\",\" - 2\n" +
+				"\"r\" - 1\n" +
+				"\"n\" - 2\n" +
+				"\"t\" - 6\n" +
+				"\"h\" - 2\n" +
+				"\"a\" - 1\n" +
+				"\"i\" - 2\n" +
+				"\"s\" - 2\n" +
+				"\"q\" - 1\n" +
+				"\"u\" - 1\n";
 		assertEquals(expected, actual);
 	}
 	
@@ -78,15 +78,15 @@ public class CharFrequencyTest {
 		uniqCharacters.calculateCharFrequency("hello world!");
 		String actual = ((ProxyCharFrequencyImpl)uniqCharacters).getCache().toString();
 		String expected = "{hello world!=hello world!\n" +
-						  "\"h\" - 1\n" +
-						  "\"e\" - 1\n" +
-						  "\"l\" - 3\n" +
-						  "\"o\" - 2\n" +
-						  "\" \" - 1\n" +
-						  "\"w\" - 1\n" +
-						  "\"r\" - 1\n" +
-						  "\"d\" - 1\n" +
-						  "\"!\" - 1\n}";
+				"\"h\" - 1\n" +
+				"\"e\" - 1\n" +
+				"\"l\" - 3\n" +
+				"\"o\" - 2\n" +
+				"\" \" - 1\n" +
+				"\"w\" - 1\n" +
+				"\"r\" - 1\n" +
+				"\"d\" - 1\n" +
+				"\"!\" - 1\n}";
 		assertEquals(expected, actual);
 	}
 	
@@ -99,37 +99,37 @@ public class CharFrequencyTest {
 		uniqCharacters.calculateCharFrequency("hello world!");
 		String actual = ((ProxyCharFrequencyImpl)uniqCharacters).getCache().toString();
 		String expected = "{hello world!=hello world!\n" +
-						  "\"h\" - 1\n" +
-						  "\"e\" - 1\n" +
-						  "\"l\" - 3\n" +
-						  "\"o\" - 2\n" +
-						  "\" \" - 1\n" +
-						  "\"w\" - 1\n" +
-						  "\"r\" - 1\n" +
-						  "\"d\" - 1\n" +
-						  "\"!\" - 1\n"+
-						  ", To be=To be\n" +
-						  "\"T\" - 1\n" +
-						  "\"o\" - 1\n" +
-						  "\" \" - 1\n" +
-						  "\"b\" - 1\n" +
-						  "\"e\" - 1\n" +
-						  ", To be, or not to be, that is the question=To be, or not to be, that is the question\n"+
-						  "\"T\" - 1\n" +
-						  "\"o\" - 5\n" +
-						  "\" \" - 9\n" +
-						  "\"b\" - 2\n" +
-						  "\"e\" - 4\n" +
-						  "\",\" - 2\n" +
-						  "\"r\" - 1\n" +
-						  "\"n\" - 2\n" +
-						  "\"t\" - 6\n" +
-						  "\"h\" - 2\n" +
-						  "\"a\" - 1\n" +
-						  "\"i\" - 2\n" +
-						  "\"s\" - 2\n" +
-						  "\"q\" - 1\n" +
-						  "\"u\" - 1\n}";
+				"\"h\" - 1\n" +
+				"\"e\" - 1\n" +
+				"\"l\" - 3\n" +
+				"\"o\" - 2\n" +
+				"\" \" - 1\n" +
+				"\"w\" - 1\n" +
+				"\"r\" - 1\n" +
+				"\"d\" - 1\n" +
+				"\"!\" - 1\n"+
+				", To be=To be\n" +
+				"\"T\" - 1\n" +
+				"\"o\" - 1\n" +
+				"\" \" - 1\n" +
+				"\"b\" - 1\n" +
+				"\"e\" - 1\n" +
+				", To be, or not to be, that is the question=To be, or not to be, that is the question\n"+
+				"\"T\" - 1\n" +
+				"\"o\" - 5\n" +
+				"\" \" - 9\n" +
+				"\"b\" - 2\n" +
+				"\"e\" - 4\n" +
+				"\",\" - 2\n" +
+				"\"r\" - 1\n" +
+				"\"n\" - 2\n" +
+				"\"t\" - 6\n" +
+				"\"h\" - 2\n" +
+				"\"a\" - 1\n" +
+				"\"i\" - 2\n" +
+				"\"s\" - 2\n" +
+				"\"q\" - 1\n" +
+				"\"u\" - 1\n}";
 		assertEquals(expected, actual);
 	}
 }
