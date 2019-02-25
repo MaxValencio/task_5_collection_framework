@@ -6,19 +6,19 @@ import java.util.Map;
 public class CharactersCounterImpl implements CharactersCounter {
 
 	public StringBuilder count(String line) {
-		Map<Character, Integer> charsAndQuantity = new LinkedHashMap<Character, Integer>();
 		if (line == null) {
 			throw new IllegalArgumentException("Line = null, the line cannot be null!");
 		}
+		Map<Character, Integer> charsQuantity = new LinkedHashMap<Character, Integer>();
 		char[] symbols = line.toCharArray();
 		for (Character symbol : symbols) {
-			if (charsAndQuantity.containsKey(symbol)) {
-				charsAndQuantity.put(symbol, charsAndQuantity.get(symbol) + 1);
+			if (charsQuantity.containsKey(symbol)) {
+				charsQuantity.put(symbol, charsQuantity.get(symbol) + 1);
 			} else {
-				charsAndQuantity.put(symbol, 1);
+				charsQuantity.put(symbol, 1);
 			}
 		}
-		return createResult(line, charsAndQuantity);
+		return createResult(line, charsQuantity);
 	}
 
 	private StringBuilder createResult(String line, Map<Character, Integer> storage) {

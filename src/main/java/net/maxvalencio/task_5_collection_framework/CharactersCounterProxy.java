@@ -12,8 +12,7 @@ public class CharactersCounterProxy implements CharactersCounter {
 		if (cache.contains(line)) {
 			return cache.get(line);
 		} else {
-			StringBuilder result = new StringBuilder();
-			result.append(counter.count(line).toString());
+			StringBuilder result = counter.count(line);
 			cache.put(line, result);
 			return result;
 		}

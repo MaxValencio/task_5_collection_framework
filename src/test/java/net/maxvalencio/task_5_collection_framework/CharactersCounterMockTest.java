@@ -21,13 +21,11 @@ public class CharactersCounterMockTest {
 
 	@Test
 	public void count_callCache() {
-		String hello = "hello world!";
-		proxy.count(hello);
-		proxy.count(hello);
-		proxy.count(hello);
-		proxy.count(hello);
-		proxy.count(hello);
-		verify(cache, times(4)).get(hello);
-		verify(counter).count(hello);
+		String line = "hello world!";
+		for (int i = 0; i < 5; i++) {
+			proxy.count(line);
+		}
+		verify(cache, times(4)).get(line);
+		verify(counter).count(line);
 	}
 }

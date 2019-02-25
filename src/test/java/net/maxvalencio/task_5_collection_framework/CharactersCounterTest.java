@@ -62,23 +62,14 @@ public class CharactersCounterTest {
 	}
 	
 	@Test
-	public void count_isCacheInvoked_correct() {
-		StringBuilder actual = counter.count("hello world!");
-		StringBuilder expected = counter.count("hello world!");
-		assertSame(expected, actual);
-	}
-	
-	@Test
-	public void count_manyInvocations_correct(){
+	public void count_holdsInCashe_correct(){
 		StringBuilder actual_1 = counter.count("To be, or not to be, that is the question");
 		StringBuilder actual_2 = counter.count("To be");
 		StringBuilder actual_3 = counter.count("hello world!");
 		StringBuilder expected_1 = counter.count("To be, or not to be, that is the question");
 		StringBuilder expected_3 = counter.count("hello world!");
 		StringBuilder expected_2 = counter.count("To be");
-		StringBuilder actual_4 = counter.count("To be, or not to be, that is the question");
 		assertSame(expected_1, actual_1);
-		assertSame(expected_1, actual_4);
 		assertSame(expected_2, actual_2);
 		assertSame(expected_3, actual_3);
 	}
