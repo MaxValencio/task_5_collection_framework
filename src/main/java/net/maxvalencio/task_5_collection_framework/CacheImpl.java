@@ -5,17 +5,17 @@ import java.util.Map;
 
 public class CacheImpl implements Cache {
 	
-	private Map<String, String> storage = new HashMap<String, String>();
+	private Map<String, StringBuilder> storage = new HashMap<>();
 	
-	public void save(String key, String value) {
-		storage.put(key, value);
+	public void put(String line, StringBuilder result) {
+		storage.put(line, result);
 	}
 	
-	public String getCacheValue(String key) {
-		return storage.get(key);
+	public StringBuilder get(String list) {
+		return storage.get(list);
 	}
 	
-	public boolean isKeyContains(String key) {
-		return storage.containsKey(key);
+	public boolean contains(String list) {
+		return storage.containsKey(list);
 	}
 }
