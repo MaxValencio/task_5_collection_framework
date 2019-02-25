@@ -1,27 +1,25 @@
 package net.maxvalencio.task_5_collection_framework;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class ProxyCharFrequencyImpl implements CharFrequency {
-	private CharFrequencyImpl charFrequency = new CharFrequencyImpl();
-	private Map<String, String> cache = new HashMap<String, String>();
+	
+	private CharFrequency charFrequency;
+	private Cache cache = new CacheImpl();
+
+	public ProxyCharFrequencyImpl(CharFrequency charFrequency) {
+		this.charFrequency = charFrequency;
+	}
 
 	public String calculateCharFrequency(String line) {
 		if (line != null) {
-			if (cache.containsKey(line)) {
-				return cache.get(line);
+			if (cache.isKeyContains(line)) {
+				return cache.getCacheValue(line);
 			} else {
 				String result = charFrequency.calculateCharFrequency(line);
-				cache.put(line, result);
+				cache.save(line, result);
 				return result;
 			}
 		} else {
 			return "Error!!! Line = null, the line cannot be null.";
 		}
-	}
-
-	public Map<String, String> getCache() {
-		return cache;
 	}
 }
