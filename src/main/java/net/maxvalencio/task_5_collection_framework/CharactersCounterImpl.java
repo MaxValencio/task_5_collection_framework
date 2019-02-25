@@ -7,12 +7,12 @@ public class CharactersCounterImpl implements CharactersCounter {
 
 	public StringBuilder count(String line) {
 		Map<Character, Integer> charsAndQuantity = new LinkedHashMap<Character, Integer>();
-		if(line == null) {
+		if (line == null) {
 			throw new IllegalArgumentException("Line = null, the line cannot be null!");
-		} 
+		}
 		char[] symbols = line.toCharArray();
 		for (Character symbol : symbols) {
-			if(charsAndQuantity.containsKey(symbol)) {
+			if (charsAndQuantity.containsKey(symbol)) {
 				charsAndQuantity.put(symbol, charsAndQuantity.get(symbol) + 1);
 			} else {
 				charsAndQuantity.put(symbol, 1);

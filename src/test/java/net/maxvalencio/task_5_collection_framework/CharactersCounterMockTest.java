@@ -12,10 +12,10 @@ public class CharactersCounterMockTest {
 
 	@Spy
 	private Cache cache = new CacheImpl();
-		
+
 	@Spy
 	private CharactersCounter counter = new CharactersCounterImpl();
-	
+
 	@InjectMocks
 	private CharactersCounter proxy = new CharactersCounterProxy();
 
