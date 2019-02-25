@@ -34,7 +34,7 @@ public class CharactersCounterTest {
 	}
 	
 	@Test(expected = IllegalArgumentException.class)  
-	public void count_nullLine_correct() {  
+	public void count_lineIsNull_correct() {  
 	  counter.count(null);
 	}
 	
@@ -62,7 +62,7 @@ public class CharactersCounterTest {
 	}
 	
 	@Test
-	public void count_holdsInCashe_correct(){
+	public void count_holdsInCaсhe_correct(){
 		StringBuilder actual_1 = counter.count("To be, or not to be, that is the question");
 		StringBuilder actual_2 = counter.count("To be");
 		StringBuilder actual_3 = counter.count("hello world!");
