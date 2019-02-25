@@ -34,7 +34,7 @@ public class CharactersCounterTest {
 	}
 	
 	@Test(expected = IllegalArgumentException.class)  
-	public void count_lineIsNull_correct() {  
+	public void count_throwsException_correct() {  
 	  counter.count(null);
 	}
 	
