@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ProxyCharFrequencyImpl implements CharFrequency {
-
+	private CharFrequencyImpl charFrequency = new CharFrequencyImpl();
 	private Map<String, String> cache = new HashMap<String, String>();
 
 	public String calculateCharFrequency(String line) {
@@ -12,7 +12,6 @@ public class ProxyCharFrequencyImpl implements CharFrequency {
 			if (cache.containsKey(line)) {
 				return cache.get(line);
 			} else {
-				CharFrequencyImpl charFrequency = new CharFrequencyImpl();
 				String result = charFrequency.calculateCharFrequency(line);
 				cache.put(line, result);
 				return result;
