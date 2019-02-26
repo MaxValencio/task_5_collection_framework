@@ -9,7 +9,7 @@ public class CharactersCounterImpl implements CharactersCounter {
 		if (line == null) {
 			throw new IllegalArgumentException("Line = null, the line cannot be null!");
 		}
-		Map<Character, Integer> charsQuantity = new LinkedHashMap<Character, Integer>();
+		Map<Character, Integer> charsQuantity = new LinkedHashMap<>();
 		char[] symbols = line.toCharArray();
 		for (Character symbol : symbols) {
 			if (charsQuantity.containsKey(symbol)) {

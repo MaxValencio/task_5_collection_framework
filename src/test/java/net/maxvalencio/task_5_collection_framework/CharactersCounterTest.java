@@ -62,13 +62,13 @@ public class CharactersCounterTest {
 	}
 	
 	@Test
-	public void count_holdsInCaсhe_correct(){
+	public void count_holdsInCache_correct(){
 		StringBuilder actual_1 = counter.count("To be, or not to be, that is the question");
 		StringBuilder actual_2 = counter.count("To be");
 		StringBuilder actual_3 = counter.count("hello world!");
 		StringBuilder expected_1 = counter.count("To be, or not to be, that is the question");
-		StringBuilder expected_3 = counter.count("hello world!");
 		StringBuilder expected_2 = counter.count("To be");
+		StringBuilder expected_3 = counter.count("hello world!");
 		assertSame(expected_1, actual_1);
 		assertSame(expected_2, actual_2);
 		assertSame(expected_3, actual_3);
